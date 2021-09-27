@@ -1,4 +1,4 @@
-class CommentService {
+class ReviewService {
     constructor(port){
         this.port = port
     }
