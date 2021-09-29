@@ -1,5 +1,5 @@
 class Review {
-    static all = []
+    static all = [];
     constructor({name, description, id, college_id, college}) {
         this.name = name;
         this.description = description;
@@ -12,5 +12,15 @@ class Review {
         Comment.all.push(this)
     }
     
+    render() {
+        this.element.innerHTML = `
+        <div> data-id="${this.id}">
+        <h3 class="Name">${this.name}</h3>
+        <p class="Description:>${this.description}</p>
+        </div>
+        `
+        return this.element.innerHTML
+    }
 
+    
 }
