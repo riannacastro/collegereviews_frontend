@@ -8,7 +8,9 @@ class ReviewService {
         .then(data => {
             for(const review of data) {
                 let r = new Review(review)
+                r.reviewToDom()
             }
         })
+        
     }
 }
