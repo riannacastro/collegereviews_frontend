@@ -5,6 +5,10 @@ class ReviewService {
     getReviews(){
         fetch(this.port + `/reviews`)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            for(const review of data) {
+                let r = new Review(review)
+            }
+        })
     }
 }
