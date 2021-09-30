@@ -7,7 +7,17 @@
     <title>College Reviews</title>
 </head>
 <body>
-    <div id="review-form"></div>
+    <div id="review-form">
+        <form id="review-form">
+            <h2>Create New Review:</h2>
+            <label for="review-name">Name:</label>
+            <input type="text" name="name" id="review-name"/><br>
+            <label for="review-description">Write Review Here:</label>
+            <input type="text" name="description" id="review-description/>"/><br>
+            <select name="college_id" id="college-dropdown"></select><br>
+            <input type="submit" value="Add Review"/>
+        </form>
+        </div>
     <div id="colleges"></div>
     <div id="reviews-cont"></div>
     <script src="src/college.js"></script>
