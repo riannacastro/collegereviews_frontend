@@ -15,6 +15,16 @@ class ReviewService {
     }
 
     createReviews() {
-        // debugger
+        const newReviewInfo = {
+            review: {
+                name: nameValue.value,
+                description: descriptionValue.value,
+                college_id: collegeValue.value
+            }
+        }
+         //debugger
+        fetch(this.port + `/reviews`)
+        .then(response => response.json())
+        .then(data => console.log(data))
     }
 }
