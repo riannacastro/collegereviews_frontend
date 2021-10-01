@@ -30,10 +30,13 @@ class ReviewService {
             },
             body: JSON.stringify(newReviewInfo)
         }
-        
+
          //debugger
         fetch(this.port + `/reviews`, configObject)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            const r = new Review(data);
+            r.reviewToDom();
+        })
     }
 }
