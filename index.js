@@ -14,5 +14,5 @@ form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e) {
     e.preventDefault();
-    reviewService.createReviews()
+    reviewService.createReviews();
 }
