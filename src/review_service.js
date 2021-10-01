@@ -39,4 +39,27 @@ class ReviewService {
             r.reviewToDom();
         })
     }
+
+    updateReviewInfo(review) {
+        const {name, description, id} = review
+        const reviewInfo = {
+            name,
+            description
+        }
+
+       const configObject = {
+           method='PATCH',
+           headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(newReviewInfo)
+       }
+
+       fetch(this.port + `reviews${id}`, configObject)
+       .then(response => response.json())
+       .then(data => {
+           
+       })
+    }
 }

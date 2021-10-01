@@ -51,7 +51,7 @@ class Review {
     updateReview() {
         this.name = this.element.querySelector(".edit-name").value;
         this.description = this.element.querySelector(".edit-description").value;
-        // debugger
+        reviewService.updateReviewInfo(this)
     }
 
     reviewToDom() {
