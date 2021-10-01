@@ -22,8 +22,16 @@ class ReviewService {
                 college_id: collegeValue.value
             }
         }
+        const configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(newReviewInfo)
+        }
          //debugger
-        fetch(this.port + `/reviews`)
+        fetch(this.port + `/reviews`, configObject)
         .then(response => response.json())
         .then(data => console.log(data))
     }
