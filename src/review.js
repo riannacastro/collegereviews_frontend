@@ -49,7 +49,9 @@ class Review {
     }
 
     updateReview() {
-    debugger
+        this.name = this.element.querySelector(".edit-name").value;
+        this.description = this.element.querySelector(".edit-description").value;
+        // debugger
     }
 
     reviewToDom() {
