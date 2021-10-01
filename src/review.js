@@ -33,6 +33,7 @@ class Review {
         } else if(e.target.innerText === "Delete Review"){
             console.log(e.target)
         } else if(e.target.innerText === "Update Review") {
+            e.target.innerText === "Edit Review"
             this.updateReview()
         }
     }
@@ -45,6 +46,10 @@ class Review {
             element.outerHTML  = `<input type="text" class="edit-${name}" value="${inputValue}"/>`
         }
     
+    }
+
+    updateReview() {
+    debugger
     }
 
     reviewToDom() {
