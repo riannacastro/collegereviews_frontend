@@ -62,4 +62,8 @@ class ReviewService {
            review.render()
        })
     }
+
+    deleteReview(e) {
+        debugger
+    }
 }

@@ -29,12 +29,12 @@ class Review {
     handleClick = (e) => {
         if(e.target.innerText === "Edit Review") {
             e.target.innerText = "Update Review"
-            this.editForm()
+            this.editForm();
         } else if(e.target.innerText === "Delete Review"){
-            console.log(e.target)
+            reviewService.deleteReview(e);
         } else if(e.target.innerText === "Update Review") {
             e.target.innerText === "Edit Review"
-            this.updateReview()
+            this.updateReview();
         }
     }
 
