@@ -42,13 +42,13 @@ class ReviewService {
 
     updateReviewInfo(review) {
         const {name, description, id} = review
-        const reviewInfo = {
+        const newReviewInfo = {
             name,
             description
         }
 
        const configObject = {
-           method='PATCH',
+           method:'PATCH',
            headers: {
             "Content-Type": "application/json",
             Accept: "application/json"
@@ -56,10 +56,10 @@ class ReviewService {
         body: JSON.stringify(newReviewInfo)
        }
 
-       fetch(this.port + `reviews${id}`, configObject)
+       fetch(this.port + `/reviews/${id}`, configObject)
        .then(response => response.json())
        .then(data => {
-           
+           review.reviewToDom()
        })
     }
 }
