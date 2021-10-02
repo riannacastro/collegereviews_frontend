@@ -59,7 +59,7 @@ class ReviewService {
        fetch(this.port + `/reviews/${id}`, configObject)
        .then(response => response.json())
        .then(data => {
-           review.reviewToDom()
+           review.render()
        })
     }
 }
