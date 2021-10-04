@@ -1,18 +1,18 @@
 body {
-    background-color: rgb(127, 216, 238);
-  }
-  
-  h1 {
-    color: rgb(0, 0, 0);
-    text-align: center;
+    background-color: rgb(232, 193, 193);
+    
   }
 
-  div {
+
+  div#reviews-cont {
+      background-color: rgb(255, 255, 255);
       text-align: center;
+
   }
   
 
+  
   p {
-    font-family: serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
