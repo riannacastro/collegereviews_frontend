@@ -7,7 +7,7 @@ class Review {
         this.id = id;
         this.college_id = college_id;
         this.college = college;
-        this.element = document.createElement('li');
+        this.element = document.createElement('ul');
         this.element.dataset['id'] = id;
         this.element.id = `review-${id}`;
         this.element.addEventListener('click', this.handleClick);
