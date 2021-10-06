@@ -14,6 +14,7 @@ collegeService.getColleges()
 form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // prevents page from refreshing
     reviewService.createReviews();
+    
 }
