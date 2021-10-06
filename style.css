@@ -5,9 +5,19 @@ body {
 
 
   div#reviews-cont {
-      background-color: rgb(255, 255, 255);
+    
       text-align: center;
 
+  }
+
+  ul {
+      border-style: solid;
+      border-color: black;
+      background-color: white;
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
   }
   
 
