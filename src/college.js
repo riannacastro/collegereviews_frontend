@@ -15,6 +15,7 @@ class College {
 
     render() {
         this.element.innerText = this.name
+        this.element.className = "college-btn"
         this.element.id = `college-${this.id}`
         return this.element
     }
