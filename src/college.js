@@ -20,13 +20,25 @@ class College {
 
     collegeToDom() {
         College.collegeCont.append(this.render());
-        this.addClickListener();
+        this.addClickListener('click', this.filterCollege);
     }
+
+    filterCollege() {
+        
+    }
+    // add event listener function for colleges
 
     addToDropDown() {
         const option = document.createElement('option');
         option.value = this.id;
         option.innerText = this.name;
         dropDown.append(option);
+    }
+
+    chooseCollegeDropdown() {
+        const option = document.createElement('option');
+        option.value = this.id
+        option.innerText = this.name
+        return option
     }
 }
