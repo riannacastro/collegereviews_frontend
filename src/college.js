@@ -19,7 +19,8 @@ class College {
     }
 
     collegeToDom() {
-        
+        College.collegeCont.append(this.render());
+        this.addClickListener();
     }
 
     addToDropDown() {
