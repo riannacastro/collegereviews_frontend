@@ -42,7 +42,6 @@ class College {
             Review.filteredByCollege(filteredCollege);
         })
     }
-    // add event listener function for colleges
 
     addToDropDown() {
         const option = document.createElement('option');
@@ -51,10 +50,4 @@ class College {
         dropDown.append(option);
     }
 
-    // chooseCollegeDropdown() {
-    //     const option = document.createElement('option');
-    //     option.value = this.id
-    //     option.innerText = this.name
-    //     return option
-    // }
 }
