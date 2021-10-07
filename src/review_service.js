@@ -37,8 +37,6 @@ class ReviewService {
         .then(data => {
             const r = new Review(data);
             r.reviewToDom();
-            // const reviewForm = document.getElementById("review-form")
-            // form.reset()
             alert("Thank you for your review.")
         })
     }

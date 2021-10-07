@@ -15,10 +15,7 @@ collegeService.getColleges()
 form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e) {
-    e.preventDefault(); // prevents page from refreshing
+    e.preventDefault();
     reviewService.createReviews();
-    // debugger
-    const reviewForm = document.getElementById("review-form");
-    reviewForm.reset(); //  Cannot read property 'reset' of undefined
-    
+    e.target.reset();
 }
