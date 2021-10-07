@@ -25,7 +25,7 @@ class College {
     }
 
     addClickListener() {
-        this.element.addClickListener('click', this.filterCollege)
+        this.element.addEventListener('click', this.filterCollege)
     }
 
     filterCollege = (e) => {

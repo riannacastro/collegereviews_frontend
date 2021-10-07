@@ -9,6 +9,7 @@ class CollegeService {
         .then(data => {
             data.forEach(element => {
                 const c = new College(element)
+                c.collegeToDom();
                 c.addToDropDown();
             });
         })
