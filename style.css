@@ -5,6 +5,11 @@ body {
     
   }
 
+  /* div#college-cont {
+      background-color: rgb(255, 0, 0);
+  } */
+ 
+
 
   div#reviews-cont {
     
@@ -15,7 +20,7 @@ body {
   ul {
       border-style: solid;
       border-color: black;
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       padding-top: 50px;
       padding-right: 30px;
       padding-bottom: 50px;

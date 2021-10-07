@@ -5,13 +5,30 @@ class Review {
         this.name = name;
         this.description = description;
         this.id = id;
-        this.college_id = college_id;
+        this.collegeId = college_id;
         this.college = college;
         this.element = document.createElement('ul');
         this.element.dataset['id'] = id;
         this.element.id = `review-${id}`;
         this.element.addEventListener('click', this.handleClick);
         Review.all.push(this);
+    }
+
+    static filteredByCollege(filteredCollege) {
+        if(filteredCollege) {
+           const filteredReviews = Review.all.filter((r) => {
+               return r.collegeId === parseInt(filteredCollege.id)
+            })
+            Review.container.innerHTML = "";
+            for(const review of filteredReviews) {
+                review.reviewToDom();
+            }
+        } else {
+            Review.container.innerHTML = "";
+            for(const review of Review.all) {
+                review.reviewToDom();
+            }
+        }
     }
     
     render() {

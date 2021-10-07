@@ -1,6 +1,6 @@
 class College {
     static all = [];
-    static collegeCont = document.getElementById("college-cont")
+    static collegeCont = document.getElementById('college-list')
     
     constructor({name, mascot, location, id, reviews}) {
         this.name = name;
@@ -8,6 +8,7 @@ class College {
         this.location = location;
         this.id = id;
         this.reviews = reviews;
+        this.active = false
         this.element = document.createElement('button');
         College.all.push(this);
     }
@@ -31,11 +32,14 @@ class College {
         let filteredCollege;
         College.all.forEach(c => {
             if(c.element === this.element && !this.active) {
+                c.element.classList.add('activated')
+                c.active = true
                 filteredCollege = c
             } else {
-
+                c.element.classList.remove('activated')
+                c.false
             }
-            Review.filteredCollege(filteredCollege);
+            Review.filteredByCollege(filteredCollege);
         })
     }
     // add event listener function for colleges
