@@ -20,11 +20,23 @@ class College {
 
     collegeToDom() {
         College.collegeCont.append(this.render());
-        this.addClickListener('click', this.filterCollege);
+        this.addClickListener();
     }
 
-    filterCollege() {
-        
+    addClickListener() {
+        this.element.addClickListener('click', this.filterCollege)
+    }
+
+    filterCollege = (e) => {
+        let filteredCollege;
+        College.all.forEach(c => {
+            if(c.element === this.element && !this.active) {
+                filteredCollege = c
+            } else {
+
+            }
+            Review.filteredCollege(filteredCollege);
+        })
     }
     // add event listener function for colleges
 
@@ -35,10 +47,10 @@ class College {
         dropDown.append(option);
     }
 
-    chooseCollegeDropdown() {
-        const option = document.createElement('option');
-        option.value = this.id
-        option.innerText = this.name
-        return option
-    }
+    // chooseCollegeDropdown() {
+    //     const option = document.createElement('option');
+    //     option.value = this.id
+    //     option.innerText = this.name
+    //     return option
+    // }
 }
