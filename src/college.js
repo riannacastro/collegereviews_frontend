@@ -1,10 +1,23 @@
 class College {
+    static all = [];
+    
     constructor({name, mascot, location, id, reviews}) {
         this.name = name;
         this.mascot = mascot;
         this.location = location;
         this.id = id;
         this.reviews = reviews;
+        this.element = document.createElement('button');
+    }
+
+    render() {
+        this.element.innerText = this.name
+        this.element.id = `college-${this.id}`
+        return this.element
+    }
+
+    collegeToDom() {
+        
     }
 
     addToDropDown() {
