@@ -1,5 +1,6 @@
 class College {
     static all = [];
+    static collegeCont = document.getElementById("college-cont")
     
     constructor({name, mascot, location, id, reviews}) {
         this.name = name;
@@ -8,6 +9,7 @@ class College {
         this.id = id;
         this.reviews = reviews;
         this.element = document.createElement('button');
+        College.all.push(this);
     }
 
     render() {
