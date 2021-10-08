@@ -40,6 +40,7 @@ class Review {
         <button class="edit" data-id=${this.id}>Edit Review</button>
         <button class="delete" data-id=${this.id}>Delete Review</button>
         `
+        this.element.className = "review-box"
         return this.element
     }
 

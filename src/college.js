@@ -33,11 +33,11 @@ class College {
         let filteredCollege;
         College.all.forEach(c => {
             if(c.element === this.element && !this.active) {
-                c.element.classList.add('activated')
+                c.element.classList.add('current')
                 c.active = true
                 filteredCollege = c
             } else {
-                c.element.classList.remove('activated')
+                c.element.classList.remove('current')
                 c.false
             }
             Review.filteredByCollege(filteredCollege);
