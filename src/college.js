@@ -38,7 +38,7 @@ class College {
                 filteredCollege = c
             } else {
                 c.element.classList.remove('current')
-                c.false
+                c.active = false
             }
             Review.filteredByCollege(filteredCollege);
         })

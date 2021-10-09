@@ -35,9 +35,14 @@ class ReviewService {
         fetch(this.port + `/reviews`, configObject)
         .then(response => response.json())
         .then(data => {
-            const r = new Review(data);
+            if(data.error) {
+                alert(data.error)
+            } else {
+                const r = new Review(data);
             r.reviewToDom();
             alert("Thank you for your review.")
+            }
+        
         })
     }
 
