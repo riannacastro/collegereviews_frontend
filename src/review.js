@@ -44,6 +44,19 @@ class Review {
         return this.element
     }
 
+    addFormListner() { // not working
+    form.addEventListener('click', this.toggle)
+    }
+
+    toggle() { // not working
+        var x = form;
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
     handleClick = (e) => {
         if(e.target.innerText === "Edit Review") {
             e.target.innerText = "Update Review"
