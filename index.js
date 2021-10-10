@@ -7,7 +7,7 @@ const dropDown = document.getElementById("college-dropdown");
 const nameValue = document.getElementById("review-name");
 const descriptionValue = document.getElementById("review-description");
 const collegeValue = document.getElementById("college-dropdown");
-
+const reviewFormBtn = document.querySelector("#new-review-btn")
 
 reviewService.getReviews()
 collegeService.getColleges()

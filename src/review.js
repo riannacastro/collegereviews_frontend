@@ -44,18 +44,31 @@ class Review {
         return this.element
     }
 
-    addFormListner() { // not working
-    form.addEventListener('click', this.toggle)
-    }
+   
+    // reviewFormBtn.addEventListener('click', () => {
+    //     let addForm = false
+    //     addForm = !addForm
+    //     if(addForm) {
+    //         addForm.style.display = "block";
+    //       } else {
+    //         addForm.style.display = "none";
+    //     }
+    // })
 
-    toggle() { // not working
-        var x = form;
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
+    // addListener() {
+    //     debugger
+    //     reviewFormBtn.addEventListener('click', reviewFormBtn.toggle)
+    // }
+    
+    // toggle() { // not working
+    //     let x = form;
+    //     const formContainer = document.querySelector(".review-form");
+    //     if (x.style.display === "none") {
+    //       formContainer.style.display = "block";
+    //     } else {
+    //       formContainer.style.display = "none";
+    //     }
+    //   }
 
     handleClick = (e) => {
         if(e.target.innerText === "Edit Review") {
