@@ -44,31 +44,6 @@ class Review {
         return this.element
     }
 
-   
-    // reviewFormBtn.addEventListener('click', () => {
-    //     let addForm = false
-    //     addForm = !addForm
-    //     if(addForm) {
-    //         addForm.style.display = "block";
-    //       } else {
-    //         addForm.style.display = "none";
-    //     }
-    // })
-
-    // addListener() {
-    //     debugger
-    //     reviewFormBtn.addEventListener('click', reviewFormBtn.toggle)
-    // }
-    
-    // toggle() { // not working
-    //     let x = form;
-    //     const formContainer = document.querySelector(".review-form");
-    //     if (x.style.display === "none") {
-    //       formContainer.style.display = "block";
-    //     } else {
-    //       formContainer.style.display = "none";
-    //     }
-    //   }
 
     handleClick = (e) => {
         if(e.target.innerText === "Edit Review") {
@@ -101,4 +76,5 @@ class Review {
     reviewToDom() {
         Review.container.appendChild(this.render())
     }
+
 }
