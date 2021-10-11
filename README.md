@@ -10,7 +10,7 @@ The thought process behind this project was for users to easily research how oth
 
 Click this link to find and clone the backend repository: https://github.com/riannacastro/collegereviews_backend
 
-- Open the terminal:
+Open the terminal:
 
 run ```bundle install```
 
@@ -18,9 +18,9 @@ run ```rails db:migrate```
 
 start the server by running ```rails s```
 
-Clone this repository
+- Clone this repository
 
-- Open the terminal:
+Open the terminal:
 
 run ```open index.html```
 
