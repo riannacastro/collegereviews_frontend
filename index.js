@@ -19,7 +19,7 @@ function handleSubmit(e) {
 }
 
 function toggle() {
-    let x = document.getElementById("review-form");
+    let x = form
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
