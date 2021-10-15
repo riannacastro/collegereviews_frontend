@@ -74,6 +74,12 @@ class ReviewService {
         e.target.parentElement.remove()
             fetch(this.port + `/reviews/${id}`, {method: 'DELETE'})
             .then(response => response.json())
-            .then(json => alert(json.message))
+            .then(json => {
+                for(let i = 0; i < Review.all.length; i++) {
+                    if(Review.all[i].id === parseInt(id))
+                    Review.all.splice(i, 1)
+                }
+                alert(json.message)
+            })
     }
 }
