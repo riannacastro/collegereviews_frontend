@@ -64,7 +64,6 @@ class Review {
             let name = element.classList[0]
             element.outerHTML  = `<input type="text" class="edit-${name}" value="${inputValue}"/>`
         }
-    
     }
 
     updateReview() {
@@ -76,5 +75,4 @@ class Review {
     reviewToDom() {
         Review.container.appendChild(this.render())
     }
-
 }

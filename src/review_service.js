@@ -10,8 +10,7 @@ class ReviewService {
                 let r = new Review(review)
                 r.reviewToDom()
             }
-        })
-        
+        }) 
     }
 
     createReviews() {
@@ -31,7 +30,6 @@ class ReviewService {
             body: JSON.stringify(newReviewInfo)
         }
 
-         //debugger
         fetch(this.port + `/reviews`, configObject)
         .then(response => response.json())
         .then(data => {
@@ -42,7 +40,6 @@ class ReviewService {
             r.reviewToDom();
             alert("Thank you for your review.")
             }
-        
         })
     }
 
