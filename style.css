@@ -39,6 +39,7 @@ body {
 }
 
  #review-form {
+     display: none;
      text-align: center;
  }
 

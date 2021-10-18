@@ -6,9 +6,10 @@ const dropDown = document.getElementById("college-dropdown");
 const nameValue = document.getElementById("review-name");
 const descriptionValue = document.getElementById("review-description");
 const collegeValue = document.getElementById("college-dropdown");
+const formBtn = document.getElementById("form-btn");
 
-reviewService.getReviews()
-collegeService.getColleges()
+reviewService.getReviews();
+collegeService.getColleges();
 
 form.addEventListener('submit', handleSubmit)
 
@@ -17,6 +18,8 @@ function handleSubmit(e) {
     reviewService.createReviews();
     e.target.reset();
 }
+
+formBtn.addEventListener('click', toggle)
 
 function toggle() {
     let x = form
