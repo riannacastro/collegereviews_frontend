@@ -20,6 +20,16 @@ class Review {
                return r.collegeId === parseInt(filteredCollege.id)
             })
             Review.container.innerHTML = "";
+            filteredReviews.sort((a, b) => {
+                if(a.name < b.name) {
+                    return -1
+                } 
+                if(a.name > b.name) {
+                    return 1
+                }
+                return 0
+                
+            })
             for(const review of filteredReviews) {
                 review.reviewToDom();
             }
@@ -30,6 +40,17 @@ class Review {
             }
         }
     }
+
+    // function compare(a, b) {
+    //     if (a is less than b by some ordering criterion) {
+    //       return -1;
+    //     }
+    //     if (a is greater than b by the ordering criterion) {
+    //       return 1;
+    //     }
+    //     // a must be equal to b
+    //     return 0;
+    //   }
     
     render() {
         this.element.innerHTML = `
